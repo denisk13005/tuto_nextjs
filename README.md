@@ -17,8 +17,9 @@ les routes se générent en fonctions des dossiers et des fichiers placés dans 
 
 ### getStaticProps()
 
-permet de générer des props à passer au composant
-`export async function getStaticProps() {
+permet de générer des props à passer au composant <br/>
+```
+export async function getStaticProps() {
   const posts = await fetch("http://jsonplaceholder.typicode.com/posts?_limit=4").then(r=> r.json())
   return {
     props:{
@@ -26,13 +27,26 @@ permet de générer des props à passer au composant
     }
   }
 }
-`
+```
 
 ### getStaticPaths()
 
-permet de générer des paths en fonction des id par exemple 
+permet de générer des paths en fonction des id par exemple <br/>
 
+// va construire toutes les urls possible en fonction du nombre d'article <br/>
+```
+export async function getStaticPaths() {
+  const posts = await fetch(`http://jsonplaceholder.typicode.com/posts?_limit=4`).then(r=>r.json())
+  return {
+    paths : posts.map(post => ({
+      params : {id: post.id.toString()}// mettre to string pour éviter une erreur 
+    })),
+    fallback : false
 
+  }
+```
+### Link 
+la balise link de 'next/link permet de naviguer entre les pages,c'est elle qui contient le href vers lequel elle pointe,  elle doit avoir en enfant direct la balise <a> '
 
 
 
