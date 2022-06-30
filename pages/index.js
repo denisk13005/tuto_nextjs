@@ -30,8 +30,20 @@ export default function Home({posts}) {
   )
 }
 
-//méthode avec next et getStaticProps : on va créer une fonction qui va faire le fetch et retourner un objet contenant les posts qu'on passera en props a la fonction Home
-export async function getStaticProps() {
+//méthode avec next et getStaticProps : on va créer une fonction qui va faire le fetch et retourner un objet contenant les posts qu'on passera en props a la fonction Home Va générer des fichiers statiques rendu coté client
+// export async function getStaticProps() {
+//   const posts = await fetch("http://jsonplaceholder.typicode.com/posts?_limit=4").then(r=> r.json())
+//   return {
+//     props:{
+//       posts
+//     }
+//   }
+// }
+
+// ******************SSR********************** 
+//à utiliser uniquement si les données relatives au site change souvent, cette méthose nécessite du nodeJs, fait appel au server à chaque rendu et est plus complexe à héberger 
+
+export async function getServerSideProps() {
   const posts = await fetch("http://jsonplaceholder.typicode.com/posts?_limit=4").then(r=> r.json())
   return {
     props:{
