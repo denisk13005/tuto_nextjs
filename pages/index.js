@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
@@ -13,7 +14,6 @@ export default function Home({posts}) {
   
     
   // }, [])
-  console.log(posts);
   return (
    <>
     <Head>
@@ -21,7 +21,12 @@ export default function Home({posts}) {
     </Head>
     <ul>
       {posts.map(post=> <li key={post.id}>
-        <h3>{post.id}--{post.title}</h3>
+        {/* balise link qui va s'occuper de la navigation  */}
+        <Link href={`/blog/${post.id}`}> 
+          <a>
+             <h3>{post.id}--{post.title}</h3>
+          </a>
+        </Link>
       </li>)}
     </ul>
    </>
