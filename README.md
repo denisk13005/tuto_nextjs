@@ -54,6 +54,16 @@ Pour que la naviguation soit rapide il faut build le projet afin de générer le
 `npx next export`
 pour pouvoir l'héberger sur githubPage par ex !
 
+!!Tout ceci concerne le rendu statique, si le site change souvent on utilisera un rendu coté serveur SSR !!
+
+# SSR 
+
+pour faire du ssr il faut remplacer les fonction getStaticProps par getServerSideProps ce mode de rendu effectue un appel server à chaque rendu, cela est utile si votre site contient des données qui changent souvent mais est moins rapide qu'un rendu client et utilise nodeJs ce qui rend l'hébergement plus difficile 
+
+
+
+
+
 
 
 
