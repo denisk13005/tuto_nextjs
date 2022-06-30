@@ -50,7 +50,7 @@ la balise link de 'next/link permet de naviguer entre les pages,c'est elle qui c
 
 ### !! info !!! ###
 
-Pour que la naviguation soit rapide il faut build le projet afin de générer les pages html statiques créer le dossier out avec ` npx next export ` pour pouvoir l'héberger sur githubPage par ex !
+Pour que la naviguation soit rapide il faut build le projet afin de générer les pages html statiques créer le dossier out avec `npx next export` pour pouvoir l'héberger sur githubPage par ex !
 
 
 
