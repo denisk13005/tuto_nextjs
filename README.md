@@ -10,14 +10,14 @@
 `npm run build`
 construit les ressources et choisi le rendu approprié en fonction du code
 
-#### rendu client 
+### rendu client 
 génère les fichiers html pour un rendu immédiat lors de la connection au site et un meilleur réferencement SEO
-#### rendu ssr
+### rendu ssr
 fait appel au server a chaque rendu (plus long), nécessite du node et est plus complexe à héberger
-#### rendu hybride
+### rendu hybride
 rendu client qui sera rafraichi toutes les x secondes (choisi par le dev) permet de combiner les avantages des 2 méthodes précédentes
 
-#### on peut mixer les 3 méthodes dans un même site au choix 
+### on peut mixer les 3 méthodes dans un même site au choix 
 
 ### export 
 `npx next export`  
