@@ -70,8 +70,11 @@ pour pouvoir l'héberger sur githubPage par ex !
 
 pour faire du ssr il faut remplacer les fonction getStaticProps par getServerSideProps ce mode de rendu effectue un appel server à chaque rendu, cela est utile si votre site contient des données qui changent souvent mais est moins rapide qu'un rendu client et utilise nodeJs ce qui rend l'hébergement plus difficile 
 
+rebuild l'appli et lancer en start
 
+# ISR rendu hybride
 
+mixe les deux rendu permet de rafraichir une page grâce à revalidate 
 
 
 
